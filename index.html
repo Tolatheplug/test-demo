@@ -6,22 +6,27 @@
   <title>ADUGREEN.COM</title>
   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet"> <!-- Typewriter font -->
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Courier Prime', monospace;
       background-color: black;  /* Black background */
       color: white;  /* White text */
-      margin: 0;
-      padding: 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      overflow: hidden;
     }
 
     header {
       position: absolute;
-      top: 30%;
+      top: 10%;
       width: 100%;
       text-align: center;
       padding-top: 20px;
@@ -38,11 +43,12 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100%;
+      margin-top: 10%;
+      text-align: center;
     }
 
     .typewriter {
-      font-size: 2em;
+      font-size: 2.5em;
       color: white;  /* White text */
       border-right: 3px solid white;  /* White cursor */
       display: inline-block;
@@ -76,6 +82,7 @@
       border-radius: 5px;
       border: 2px solid white; /* Optional: White border for button */
       transition: background-color 0.3s ease;
+      margin-bottom: 30px;
     }
 
     .cta-button:hover {
@@ -84,17 +91,25 @@
 
     /* Email Form */
     .email-form {
-      margin-top: 30px;
+      width: 100%;
+      max-width: 400px;
+      margin-top: 40px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-align: center;
+    }
+
+    .email-form h2 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
     }
 
     .email-form input {
-      padding: 10px;
+      padding: 12px;
       margin: 10px;
       font-size: 1em;
-      width: 250px;
+      width: 100%;
       border-radius: 5px;
       border: 2px solid white;
       background-color: transparent;
@@ -109,6 +124,7 @@
       border: 2px solid white;
       font-size: 1.2em;
       cursor: pointer;
+      width: 100%;
       transition: background-color 0.3s ease;
     }
 
@@ -119,7 +135,7 @@
     /* Responsive Design */
     @media (max-width: 768px) {
       .typewriter {
-        font-size: 1.5em;
+        font-size: 2em;
       }
 
       .cta-button {
@@ -132,13 +148,13 @@
       }
 
       .email-form input, .email-form button {
-        width: 200px;
+        font-size: 1em;
       }
     }
 
     @media (max-width: 480px) {
       .typewriter {
-        font-size: 1.2em;
+        font-size: 1.5em;
       }
 
       .cta-button {
@@ -150,8 +166,13 @@
         width: 100px;
       }
 
+      .email-form h2 {
+        font-size: 1.5em;
+      }
+
       .email-form input, .email-form button {
-        width: 180px;
+        font-size: 1em;
+        width: 90%;
       }
     }
   </style>
