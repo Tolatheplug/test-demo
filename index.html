@@ -22,19 +22,16 @@
       align-items: center;
       height: 100vh;
       overflow: hidden;
+      text-align: center;
+      padding: 20px;
     }
 
     header {
-      position: absolute;
-      top: 10%;
-      width: 100%;
-      text-align: center;
-      padding-top: 20px;
+      margin-bottom: 30px;
     }
 
     .logo {
       width: 150px;
-      max-width: 100%;
       height: auto;
     }
 
@@ -43,78 +40,73 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-top: 10%;
       text-align: center;
     }
 
     .typewriter {
       font-size: 2.5em;
-      color: white;  /* White text */
-      border-right: 3px solid white;  /* White cursor */
+      color: white;
+      border-right: 3px solid white;
       display: inline-block;
       white-space: nowrap;
       overflow: hidden;
       animation: typing 3s steps(30) 1s 1 normal both, blink 0.75s step-end infinite;
-      margin-bottom: 30px;  /* Add margin below text */
+      margin-bottom: 20px;
     }
 
     @keyframes typing {
-      from {
-        width: 0;
-      }
-      to {
-        width: 100%;
-      }
+      from { width: 0; }
+      to { width: 100%; }
     }
 
     @keyframes blink {
-      50% {
-        border-color: transparent;
-      }
+      50% { border-color: transparent; }
     }
 
     .cta-button {
       padding: 15px 30px;
-      background-color: black;  /* Black button */
-      color: white;  /* White text */
+      background-color: black;
+      color: white;
       text-decoration: none;
       font-size: 1.2em;
       border-radius: 5px;
-      border: 2px solid white; /* Optional: White border for button */
+      border: 2px solid white;
       transition: background-color 0.3s ease;
       margin-bottom: 30px;
     }
 
     .cta-button:hover {
-      background-color: #333;  /* Darker black on hover */
+      background-color: #333;
     }
 
     /* Email Form */
     .email-form {
       width: 100%;
-      max-width: 400px;
+      max-width: 500px;
       margin-top: 40px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+      border-radius: 10px;
     }
 
     .email-form h2 {
       font-size: 1.8em;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
     .email-form h3 {
       font-size: 1.2em;
+      font-style: italic;
+      font-weight: normal;
       margin-bottom: 20px;
-      font-style: italic;  /* Apply italics */
-      font-weight: normal; /* Remove bold */
     }
 
     .email-form input {
       padding: 12px;
-      margin: 10px;
+      margin: 10px 0;
       font-size: 1em;
       width: 100%;
       border-radius: 5px;
@@ -124,7 +116,7 @@
     }
 
     .email-form button {
-      padding: 12px 25px;
+      padding: 15px 30px;
       background-color: black;
       color: white;
       border-radius: 5px;
@@ -154,6 +146,14 @@
         width: 120px;
       }
 
+      .email-form {
+        padding: 15px;
+      }
+
+      .email-form h2 {
+        font-size: 1.6em;
+      }
+
       .email-form input, .email-form button {
         font-size: 1em;
       }
@@ -174,12 +174,12 @@
       }
 
       .email-form h2 {
-        font-size: 1.5em;
+        font-size: 1.4em;
       }
 
       .email-form input, .email-form button {
         font-size: 1em;
-        width: 90%;
+        padding: 12px;
       }
     }
   </style>
@@ -205,9 +205,3 @@
   </div>
 </body>
 </html>
-
-    </div>
-  </div>
-</body>
-</html>
-
