@@ -73,10 +73,17 @@
       border: 2px solid white;
       transition: background-color 0.3s ease;
       margin-bottom: 30px;
+      pointer-events: none; /* Disables the link */
     }
 
     .cta-button:hover {
       background-color: #333;
+    }
+
+    .store-closed {
+      font-size: 1.2em;
+      color: red;
+      margin-top: 10px;
     }
 
     /* Email Form */
@@ -214,8 +221,9 @@
     <img src="images/White.PNG" alt="Store Logo" class="logo"> <!-- Your logo image here -->
   </header>
   <div class="content">
-    <div class="typewriter">Good To Smell You Again!</div> <!-- Fixed missing closing tag -->
-    <a href="https://paystack.shop/adu" class="cta-button">Shop Now</a> <!-- Replace with your product page link -->
+    <div class="typewriter">Next Restock: Friday 28th Of March!</div> <!-- Changed the typewriter text -->
+    <div class="cta-button">Store Closed</div> <!-- Disabled the link and replaced text with "Store Closed" -->
+    <div class="store-closed">Store Closed</div> <!-- Added "Store Closed" text -->
     
     <!-- Email Capture Form -->
     <div class="email-form">
@@ -230,4 +238,3 @@
   </div>
 </body>
 </html>
-
