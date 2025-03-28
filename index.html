@@ -74,7 +74,6 @@
       border: 2px solid white;
       transition: background-color 0.3s ease;
       margin-bottom: 30px;
-      pointer-events: none; /* Disables the link */
     }
 
     .cta-button:hover {
@@ -85,59 +84,6 @@
       font-size: 1.5em;
       color: red;
       margin-top: 10px;
-    }
-
-    /* Email Form */
-    .email-form {
-      width: 100%;
-      max-width: 500px;
-      margin-top: 40px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    .email-form h2 {
-      font-size: 1.8em;
-      margin-bottom: 15px;
-    }
-
-    .email-form h3 {
-      font-size: 1.2em;
-      font-style: italic;
-      font-weight: normal;
-      margin-bottom: 20px;
-    }
-
-    .email-form input {
-      padding: 12px;
-      margin: 10px 0;
-      font-size: 1em;
-      width: 100%;
-      border-radius: 5px;
-      border: 2px solid white;
-      background-color: transparent;
-      color: white;
-    }
-
-    .email-form button {
-      padding: 15px 30px;
-      background-color: black;
-      color: white;
-      border-radius: 5px;
-      border: 2px solid white;
-      font-size: 1.2em;
-      cursor: pointer;
-      width: 100%;
-      transition: background-color 0.3s ease;
-    }
-
-    .email-form button:hover {
-      background-color: #333;
     }
 
     /* Responsive Design */
@@ -154,14 +100,6 @@
         font-size: 1.1em;
         padding: 14px 28px;
       }
-
-      .email-form h2 {
-        font-size: 1.7em;
-      }
-
-      .email-form input, .email-form button {
-        font-size: 1em;
-      }
     }
 
     @media (max-width: 768px) {
@@ -176,18 +114,6 @@
       .cta-button {
         font-size: 1em;
         padding: 12px 24px;
-      }
-
-      .email-form {
-        padding: 15px;
-      }
-
-      .email-form h2 {
-        font-size: 1.6em;
-      }
-
-      .email-form input, .email-form button {
-        font-size: 1em;
       }
     }
 
@@ -204,15 +130,6 @@
         font-size: 1em;
         padding: 10px 20px;
       }
-
-      .email-form h2 {
-        font-size: 1.4em;
-      }
-
-      .email-form input, .email-form button {
-        font-size: 1em;
-        padding: 12px;
-      }
     }
 
     @media (max-width: 360px) {
@@ -228,15 +145,6 @@
         font-size: 0.9em;
         padding: 10px 18px;
       }
-
-      .email-form h2 {
-        font-size: 1.3em;
-      }
-
-      .email-form input, .email-form button {
-        font-size: 0.9em;
-        padding: 10px;
-      }
     }
   </style>
 </head>
@@ -245,20 +153,9 @@
     <img src="images/White.PNG" alt="Store Logo" class="logo"> <!-- Your logo image here -->
   </header>
   <div class="content">
-    <div class="typewriter">Next Restock: Friday 28th, March!</div>
-    <div class="cta-button">Store Closed</div> <!-- Disabled the link and replaced text with "Store Closed" -->
-    <div class="store-closed">Store Closed</div> <!-- Added "Store Closed" text -->
+    <div class="typewriter">Good To Smell You Again!</div>
+    <a href="https://www.paystack.shop/adu" class="cta-button">Enter Store (Store Closed)</a> <!-- The link to your store page -->
     
-    <!-- Email Capture Form -->
-    <div class="email-form">
-      <h2>Freshly Made (Weekly Drop)! </h2>
-      <h3>Submit email for Discounts code and early access to website</h3>
-      <!-- Formspree email capture form -->
-      <form action="https://formspree.io/f/xzzeeglg" method="POST"> <!-- Replace with your Formspree endpoint -->
-        <input type="email" name="email" placeholder="Enter your email" required>
-        <button type="submit">submiT</button>
-      </form>
-    </div>
   </div>
 </body>
 </html>
