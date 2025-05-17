@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ADUGREEN.COM</title>
-  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet"> <!-- Typewriter font -->
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet" />
+
   <style>
+    /* Reset & Base Styles */
     * {
       margin: 0;
       padding: 0;
@@ -14,18 +16,19 @@
 
     body {
       font-family: 'Courier Prime', monospace;
-      background-color: black;  /* Black background */
-      color: white;  /* White text */
+      background-color: #000;
+      color: #fff;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      height: 100vh;
-      overflow: hidden;
+      justify-content: center;
+      min-height: 100vh;
       text-align: center;
       padding: 20px;
+      overflow-x: hidden;
     }
 
+    /* Header & Logo */
     header {
       margin-bottom: 30px;
     }
@@ -35,19 +38,20 @@
       height: auto;
     }
 
+    /* Main Content */
     .content {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
       text-align: center;
+      width: 100%;
+      max-width: 800px;
     }
 
+    /* Typewriter Effect */
     .typewriter {
       font-size: 2.5em;
-      color: white;
-      border-right: 3px solid white;
-      display: inline-block;
+      border-right: 3px solid #fff;
       white-space: nowrap;
       overflow: hidden;
       animation: typing 3s steps(30) 1s 1 normal both, blink 0.75s step-end infinite;
@@ -63,17 +67,18 @@
       50% { border-color: transparent; }
     }
 
+    /* Store Button */
     .cta-button {
       padding: 15px 30px;
-      background-color: black;
-      color: white;
-      text-decoration: none;
       font-size: 1.2em;
+      background-color: #000;
+      color: #fff;
+      border: 2px solid #fff;
       border-radius: 5px;
-      border: 2px solid white;
+      text-decoration: none;
+      margin-bottom: 15px;
       transition: background-color 0.3s ease;
-      margin-bottom: 30px;
-      pointer-events: none; /* Disables the link */
+      pointer-events: none;
     }
 
     .cta-button:hover {
@@ -83,25 +88,21 @@
     .store-closed {
       font-size: 1.2em;
       color: red;
-      margin-top: 10px;
     }
 
     /* Email Form */
     .email-form {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 40px;
       width: 100%;
       max-width: 500px;
-      margin-top: 40px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
-      border-radius: 10px;
     }
 
     .email-form h2 {
       font-size: 1.8em;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
     .email-form h3 {
@@ -112,25 +113,25 @@
     }
 
     .email-form input {
-      padding: 12px;
-      margin: 10px 0;
-      font-size: 1em;
       width: 100%;
+      padding: 12px;
+      font-size: 1em;
+      border: 2px solid #fff;
       border-radius: 5px;
-      border: 2px solid white;
       background-color: transparent;
-      color: white;
+      color: #fff;
+      margin-bottom: 15px;
     }
 
     .email-form button {
-      padding: 15px 30px;
-      background-color: black;
-      color: white;
-      border-radius: 5px;
-      border: 2px solid white;
-      font-size: 1.2em;
-      cursor: pointer;
       width: 100%;
+      padding: 15px;
+      font-size: 1.2em;
+      background-color: #000;
+      color: #fff;
+      border: 2px solid #fff;
+      border-radius: 5px;
+      cursor: pointer;
       transition: background-color 0.3s ease;
     }
 
@@ -138,19 +139,19 @@
       background-color: #333;
     }
 
-    /* Responsive Design */
+    /* Responsive Breakpoints */
     @media (max-width: 768px) {
       .typewriter {
         font-size: 2em;
       }
 
+      .logo {
+        width: 120px;
+      }
+
       .cta-button {
         font-size: 1.1em;
         padding: 12px 25px;
-      }
-
-      .logo {
-        width: 120px;
       }
 
       .email-form {
@@ -160,10 +161,6 @@
       .email-form h2 {
         font-size: 1.6em;
       }
-
-      .email-form input, .email-form button {
-        font-size: 1em;
-      }
     }
 
     @media (max-width: 480px) {
@@ -171,29 +168,33 @@
         font-size: 1.5em;
       }
 
+      .logo {
+        width: 100px;
+      }
+
       .cta-button {
         font-size: 1em;
         padding: 10px 20px;
-      }
-
-      .logo {
-        width: 100px;
       }
 
       .email-form h2 {
         font-size: 1.4em;
       }
 
-      .email-form input, .email-form button {
+      .email-form input,
+      .email-form button {
         font-size: 1em;
         padding: 12px;
       }
     }
 
-    /* Extra small devices (portrait phones) */
     @media (max-width: 360px) {
       .typewriter {
         font-size: 1.4em;
+      }
+
+      .logo {
+        width: 90px;
       }
 
       .cta-button {
@@ -201,15 +202,12 @@
         padding: 10px 18px;
       }
 
-      .logo {
-        width: 90px;
-      }
-
       .email-form h2 {
         font-size: 1.3em;
       }
 
-      .email-form input, .email-form button {
+      .email-form input,
+      .email-form button {
         font-size: 0.9em;
         padding: 10px;
       }
@@ -218,23 +216,22 @@
 </head>
 <body>
   <header>
-    <img src="images/White.PNG" alt="Store Logo" class="logo"> <!-- Your logo image here -->
+    <img src="images/White.PNG" alt="Store Logo" class="logo" />
   </header>
-  <div class="content">
-    <div class="typewriter">Next Restock: Thurs. 22nd Of May!</div> <!-- Changed the typewriter text -->
-    <div class="cta-button">Store Closed</div> <!-- Disabled the link and replaced text with "Store Closed" -->
-    <div class="store-closed">Store Closed</div> <!-- Added "Store Closed" text -->
-    
-    <!-- Email Capture Form -->
-    <div class="email-form">
-      <h2>Freshly Made (Weekly Drop)! </h2>
-      <h3>Submit email for Discounts code and early access to website</h3>
-      <!-- Formspree email capture form -->
-      <form action="https://formspree.io/f/xzzeeglg" method="POST"> <!-- Replace with your Formspree endpoint -->
-        <input type="email" name="email" placeholder="Enter your email" required>
-        <button type="submit">submiT</button>
+
+  <main class="content">
+    <div class="typewriter">Next Restock: Thurs. 22nd Of May!</div>
+    <div class="cta-button">Store Closed</div>
+    <div class="store-closed">Store Closed</div>
+
+    <section class="email-form">
+      <h2>Freshly Made (Weekly Drop)!</h2>
+      <h3>Submit email for discount code and early access</h3>
+      <form action="https://formspree.io/f/xzzeeglg" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" required />
+        <button type="submit">Submit</button>
       </form>
-    </div>
-  </div>
+    </section>
+  </main>
 </body>
 </html>
