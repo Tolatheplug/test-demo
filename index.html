@@ -2,17 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ADUGREEN.COM</title>
   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet" />
-
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Courier Prime', monospace;
       background-color: #000;
@@ -25,16 +23,13 @@
       text-align: center;
       padding: 20px;
     }
-
     header {
       margin-bottom: 30px;
     }
-
     .logo {
       width: 150px;
       height: auto;
     }
-
     .content {
       display: flex;
       flex-direction: column;
@@ -42,13 +37,10 @@
       width: 100%;
       max-width: 800px;
     }
-
     .countdown {
       font-size: 2.5em;
       margin-bottom: 20px;
     }
-
-    /* Store Closed button styled red */
     .cta-button {
       padding: 15px 30px;
       font-size: 1.2em;
@@ -58,18 +50,8 @@
       border-radius: 5px;
       margin-bottom: 15px;
       pointer-events: none;
+      user-select: none;
     }
-
-    .cta-button:hover {
-      background-color: #330000;
-    }
-
-    .store-closed {
-      font-size: 1.2em;
-      color: red;
-      margin-bottom: 20px;
-    }
-
     .email-form {
       background-color: rgba(0, 0, 0, 0.6);
       padding: 20px;
@@ -78,28 +60,23 @@
       width: 100%;
       max-width: 500px;
     }
-
     .email-form h2 {
       font-size: 1.8em;
       margin-bottom: 10px;
       white-space: nowrap;
       display: inline-block;
     }
-
     .email-form h3 {
       font-size: 1.2em;
       font-style: italic;
       font-weight: normal;
       margin-bottom: 20px;
     }
-
-    /* Form with input and button side by side */
     form {
       display: flex;
       gap: 10px;
       width: 100%;
     }
-
     form input[type="email"] {
       flex: 1;
       padding: 12px;
@@ -109,8 +86,8 @@
       background-color: transparent;
       color: #fff;
       margin-bottom: 0;
+      min-width: 0; /* prevent input overflow on small screens */
     }
-
     form button {
       padding: 12px 25px;
       font-size: 1.2em;
@@ -122,12 +99,42 @@
       transition: background-color 0.3s ease;
       white-space: nowrap;
       margin-bottom: 0;
+      flex-shrink: 0;
     }
-
     form button:hover {
       background-color: #333;
     }
+    @media (max-width: 480px) {
+      /* Stack input and button vertically on very small screens */
+      form {
+        flex-direction: column;
+      }
+      form input,
+      form button {
+        width: 100%;
+      }
+      .email-form h2 {
+        white-space: normal;
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/White.PNG" alt="Store Logo" class="logo" />
+  </header>
 
-    @media (max-width: 768px) {
-      .countdown {
-        font-size: 2em;
+  <main class="content">
+    <div id="countdown" class="countdown">Loading countdown...</div>
+    <div class="cta-button">Store Closed</div>
+
+    <section class="email-form">
+      <h2>Freshly Hand Made Skincare Products!</h2>
+      <h3>Submit email for discount code and early access</h3>
+      <form action="https://formspree.io/f/xzzeeglg" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" required />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
