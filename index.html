@@ -66,6 +66,7 @@
     .store-closed {
       font-size: 1.2em;
       color: red;
+      margin-bottom: 20px;
     }
 
     .email-form {
@@ -80,6 +81,9 @@
     .email-form h2 {
       font-size: 1.8em;
       margin-bottom: 10px;
+      /* Make text inline */
+      white-space: nowrap;
+      display: inline-block;
     }
 
     .email-form h3 {
@@ -129,6 +133,11 @@
         font-size: 1.1em;
         padding: 12px 25px;
       }
+
+      .email-form h2 {
+        white-space: normal;
+        display: block;
+      }
     }
 
     @media (max-width: 480px) {
@@ -170,7 +179,7 @@
   <main class="content">
     <div id="countdown" class="countdown">Loading countdown...</div>
     <div class="cta-button">Store Closed</div>
-    <div class="store-closed">Store Closed</div>
+    <!-- Removed duplicate Store Closed -->
 
     <section class="email-form">
       <h2>Freshly Hand Made Skincare Products!</h2>
