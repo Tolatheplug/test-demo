@@ -52,15 +52,15 @@
       padding: 15px 30px;
       font-size: 1.2em;
       background-color: #000;
-      color: #fff;
-      border: 2px solid #fff;
+      color: red; /* Make Store Closed button text red */
+      border: 2px solid red; /* Border in red for better style */
       border-radius: 5px;
       margin-bottom: 15px;
       pointer-events: none;
     }
 
     .cta-button:hover {
-      background-color: #333;
+      background-color: #330000;
     }
 
     .store-closed {
@@ -78,11 +78,13 @@
       max-width: 500px;
     }
 
+    /* Always keep h2 text in one line with no wrapping */
     .email-form h2 {
       font-size: 1.8em;
       margin-bottom: 10px;
-      /* Make text inline */
       white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; /* in case text is too long */
       display: inline-block;
     }
 
@@ -134,9 +136,9 @@
         padding: 12px 25px;
       }
 
+      /* Keep no wrap for h2 on smaller devices */
       .email-form h2 {
-        white-space: normal;
-        display: block;
+        white-space: nowrap;
       }
     }
 
