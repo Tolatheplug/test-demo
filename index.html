@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ADUGREEN.COM</title>
-  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet"> <!-- Typewriter font -->
   <style>
     * {
       margin: 0;
@@ -15,13 +14,14 @@
 
     body {
       font-family: 'Courier Prime', monospace;
-      background-color: #000;
-      color: #fff;
+      background-color: black;  /* Black background */
+      color: white;  /* White text */
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      min-height: 100vh;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
       text-align: center;
       padding: 20px;
     }
@@ -31,136 +31,99 @@
     }
 
     .logo {
-      width: 150px;
+      width: 180px;
       height: auto;
+      transition: width 0.3s ease;
     }
 
     .content {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
-      width: 100%;
-      max-width: 800px;
+      text-align: center;
     }
 
-    .countdown {
+    .typewriter {
       font-size: 2.5em;
+      color: white;
+      border-right: 3px solid white;
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 3s steps(30) 1s 1 normal both, blink 0.75s step-end infinite;
       margin-bottom: 20px;
     }
 
-    /* Store Closed button styled red */
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
     .cta-button {
       padding: 15px 30px;
+      background-color: black;
+      color: white;
+      text-decoration: none;
       font-size: 1.2em;
-      background-color: #000;
-      color: red;
-      border: 2px solid red;
       border-radius: 5px;
-      margin-bottom: 15px;
-      pointer-events: none;
+      border: 2px solid white;
+      transition: background-color 0.3s ease;
+      margin-bottom: 30px;
     }
 
     .cta-button:hover {
-      background-color: #330000;
+      background-color: #333;
     }
 
     .store-closed {
-      font-size: 1.2em;
-      color: red;
-      margin-bottom: 20px;
-    }
-
-    .email-form {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 40px;
-      width: 100%;
-      max-width: 500px;
-    }
-
-    .email-form h2 {
-      font-size: 1.8em;
-      margin-bottom: 10px;
-      white-space: nowrap;
-      display: inline-block;
-    }
-
-    .email-form h3 {
-      font-size: 1.2em;
-      font-style: italic;
-      font-weight: normal;
-      margin-bottom: 20px;
-    }
-
-    /* Form with input and submit arrow inside input */
-    form {
-      position: relative;
-      width: 100%;
-    }
-
-    form input[type="email"] {
-      width: 100%;
-      padding: 12px 45px 12px 12px; /* right padding for arrow button */
-      font-size: 1em;
-      border: 2px solid #fff;
-      border-radius: 5px;
-      background-color: transparent;
-      color: #fff;
-      margin-bottom: 0;
-    }
-
-    form button {
-      position: absolute;
-      right: 5px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: transparent;
-      border: none;
-      color: #fff;
       font-size: 1.5em;
-      cursor: pointer;
-      padding: 0;
-      width: 35px;
-      height: 35px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: color 0.3s ease;
-      user-select: none;
+      color: red;
+      margin-top: 10px;
     }
 
-    form button:hover {
-      color: #ccc;
-    }
-
-    @media (max-width: 768px) {
-      .countdown {
-        font-size: 2em;
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .logo {
+        width: 150px;
       }
 
-      .logo {
-        width: 120px;
+      .typewriter {
+        font-size: 2.2em;
       }
 
       .cta-button {
         font-size: 1.1em;
-        padding: 12px 25px;
+        padding: 14px 28px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .logo {
+        width: 120px;
       }
 
-      .email-form h2 {
-        white-space: normal;
-        display: block;
+      .typewriter {
+        font-size: 2em;
+      }
+
+      .cta-button {
+        font-size: 1em;
+        padding: 12px 24px;
       }
     }
 
     @media (max-width: 480px) {
-      .countdown {
-        font-size: 1.5em;
-      }
-
       .logo {
         width: 100px;
+      }
+
+      .typewriter {
+        font-size: 1.8em;
       }
 
       .cta-button {
@@ -170,12 +133,12 @@
     }
 
     @media (max-width: 360px) {
-      .countdown {
-        font-size: 1.4em;
-      }
-
       .logo {
         width: 90px;
+      }
+
+      .typewriter {
+        font-size: 1.6em;
       }
 
       .cta-button {
@@ -187,50 +150,12 @@
 </head>
 <body>
   <header>
-    <img src="images/White.PNG" alt="Store Logo" class="logo" />
+    <img src="images/White.PNG" alt="Store Logo" class="logo"> <!-- Your logo image here -->
   </header>
-
-  <main class="content">
-    <div id="countdown" class="countdown">Loading countdown...</div>
-    <div class="cta-button">Store Closed</div>
-
-    <section class="email-form">
-      <h2>Freshly Hand Made Skincare Products!</h2>
-      <h3>Submit email for discount code and early access</h3>
-      <form action="https://formspree.io/f/xzzeeglg" method="POST">
-        <input type="email" name="email" placeholder="Enter your email" required />
-        <button type="submit" aria-label="Submit email">&#10132;</button>
-      </form>
-    </section>
-  </main>
-
-  <script>
-    // Set target date: May 22, 2025 at 00:00
-    const targetDate = new Date("May 22, 2025 00:00:00").getTime();
-
-    const countdownElement = document.getElementById("countdown");
-
-    const updateCountdown = () => {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
-
-      if (distance <= 0) {
-        countdownElement.innerText = "Restock is live!";
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      countdownElement.innerText =
-        `Next Restock In: ${days}d ${hours}h ${minutes}m ${seconds}s`;
-    };
-
-    // Initial call and repeat every second
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-  </script>
+  <div class="content">
+    <div class="typewriter">Good To Smell You Again!</div>
+    <a href="https://www.paystack.shop/adu" class="cta-button">Enter Store</a> <!-- The link to your store page -->
+    
+  </div>
 </body>
 </html>
